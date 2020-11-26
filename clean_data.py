@@ -8,7 +8,7 @@ numeric_columns = [col for col in df.columns if ((df[col].dtype=='int64' or df[c
 #min = df[df['EstimatedSalary'] == df['EstimatedSalary'].min()]
 
 #Dummy Encoding
-df["Age"] = pd.cut(df["Age"],bins=[10,20,30,40,50,60,70,80,90])
+df["Age"] = pd.cut(df["Age"],bins=[10,20,30,40,50,60,70,80])
 df = pd.get_dummies(df)
 
 #Remove Dummy Variable Trap
